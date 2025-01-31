@@ -36,12 +36,14 @@ export default function Todos() {
 
   return (
     <>
+      {/* TOAST NOTIFICATION */}
       {showToast && (
         <ToastNotification
           toastMessage={"Todo Deleted successfully"}
           setShowToast={showToast}
         />
       )}
+      
       <main className="container my-5">
         {/* LOADING STATES */}
         {loading && <p>Loading...</p>}
