@@ -6,6 +6,7 @@ import ToastNotification from "../components/ToastNotification.jsx";
 export default function Todos() {
   //STATES
   const [showToast, setShowToast] = useState(false);
+  const [showAddTodoForm, setShowAddTodoForm] = useState(false);
 
   //DATA FETCH
   const { data, loading, error, refetch } = useFetch(
@@ -43,7 +44,7 @@ export default function Todos() {
           setShowToast={showToast}
         />
       )}
-      
+
       <main className="container my-5">
         {/* LOADING STATES */}
         {loading && <p>Loading...</p>}
