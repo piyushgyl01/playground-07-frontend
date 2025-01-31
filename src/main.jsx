@@ -7,6 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Todos from "./pages/Todos.jsx";
+import TodoDetails from "./pages/TodoDetails.jsx";
 import About from "./pages/About.jsx";
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/todos",
         element: <Todos />,
+      },
+      {
+        path: "/todos/:title/:todoID",
+        element: <TodoDetails />,
       },
       {
         path: "/about",
